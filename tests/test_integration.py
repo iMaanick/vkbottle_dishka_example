@@ -6,7 +6,7 @@ from unittest.mock import Mock
 import pytest
 from dishka import FromDishka, make_async_container
 from dishka.provider import BaseProvider
-from src.vkbottle_dishka.vk_dishka import inject, setup_dishka
+from vkbottle_dishka.vk_dishka import inject, setup_dishka
 from vkbottle.bot import Bot, Message
 
 from .common import (

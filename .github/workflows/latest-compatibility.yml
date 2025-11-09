@@ -9,6 +9,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
@@ -19,8 +20,8 @@ jobs:
 
       - name: Install dependencies
         run: |
-          uv pip install --system nox
+          uv pip install --system "nox>=2023.12.0"
 
       - name: Run tests
         run: |
-          nox --tag latest
+          uv run nox --tag latest
